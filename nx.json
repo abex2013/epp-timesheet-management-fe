@@ -1,0 +1,86 @@
+{
+  "npmScope": "exec-epp",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "applicant-tracking": {
+      "tags": []
+    },
+    "applicant-tracking-e2e": {
+      "tags": [],
+      "implicitDependencies": ["applicant-tracking"]
+    },
+    "client-management": {
+      "tags": []
+    },
+    "client-management-e2e": {
+      "tags": [],
+      "implicitDependencies": ["client-management"]
+    },
+    "core-model": {
+      "tags": []
+    },
+    "epp-dashboard": {
+      "tags": []
+    },
+    "epp-dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": ["epp-dashboard"]
+    },
+    "ng-zorro": {
+      "tags": []
+    },
+    "project-management": {
+      "tags": []
+    },
+    "project-management-e2e": {
+      "tags": [],
+      "implicitDependencies": ["project-management"]
+    },
+    "resource-management": {
+      "tags": []
+    },
+    "resource-management-e2e": {
+      "tags": [],
+      "implicitDependencies": ["resource-management"]
+    },
+    "timesheet": {
+      "tags": []
+    },
+    "timesheet-e2e": {
+      "tags": [],
+      "implicitDependencies": ["timesheet"]
+    },
+    "usermanagement": {
+      "tags": []
+    },
+    "usermanagement-e2e": {
+      "tags": [],
+      "implicitDependencies": ["usermanagement"]
+    }
+  }
+}
